@@ -1,0 +1,83 @@
+class func():
+	jname="akash"
+	def __init__(self,a,b,c):
+		self.bname=a
+		self.gname=b
+		self.dname=c
+		self.fname=func.jname or self.jname
+	def risk(self,l,j):
+		print(self.bname,l,j)
+	def like(self):
+		print('i like her')
+
+we have a lot of things to notice here
+1)jname is a class variable we can define it directly.
+->in order to use jname we can [classname].jname or self.jname as it is a class variable.
+2)if we have methods in a class 
+eg>	def func(self,l,j):
+		print(self.bname,l,j)
+	here if we have to use its paramater then we can use directly print(l,j)
+	and if we want to access the class variables in init method then we have to do
+	self.bname etc or [self.jname or func.jname]
+inheritance and polymorphism
+class zunc(func):
+	def__init__(self,d):
+		self.d=d
+	def risk(self):
+		print('we have a risk')
+
+The class zunc inherits func
+it means all the methods in the func class are now available to zunc
+so we can create a object of zunc and call the methods of func
+r=zunc('nikhil')
+r.like()
+we can also call the init method i.e the constructor of the class func
+by writing
+func.__init__(self)
+polymorphism)
+two class with same method names are differentiated
+a=func(1,2,3)
+b=zunc(2)
+now if we call a.risk it will print bname,i,j of class func and when
+we call b.risk it will print we have a risk
+this is also called as method overriding.
+
+
+we can iterate objects through for loop
+
+for i in (a,b):
+	print(a.like)
+	print(b.like)
+
+
+abstract class is a class which is not expected to get insantiated and just get inherited
+class animal():
+	def __init__(self,name):
+		self.name=name
+	def speak(self):   // abstract method
+
+class dog(animal):
+	def speak(self):
+		print('i can bark')
+class cat(animal):
+	def speak(self):
+		print('i can meow')
+
+
+majic methods)
+THere are inbuilt methods such as print,length.
+if we want to use these methods to work with our instances of our class 
+we can do it
+eg1
+whenever we print(object) it gives the string represention of our object
+here we can use __str__ method.Here it says whatever a function asks for string
+representation of our object it will return what we write in our __str__ method
+print(b)
+str(b) 
+def__len__():
+
+
+del b deletes b 
+if we want to add some statement when del is called
+we can do override __del__():
+			

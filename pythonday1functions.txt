@@ -1,0 +1,218 @@
+1)max of 3 numbers
+ def max(no1,no2,no3):
+	if no1>no2:
+		if no1>no3:
+			return no1
+	if no2>no3:
+		return no2
+	else:
+		return no3
+2)function to return sum of list
+ def sumoflist(n):
+    sum=0
+    for i in n:
+        sum=sum+i
+    return(sum)
+
+samplelist=[8,2,3,0,7]
+sum=sumoflist(samplelist)
+print(sum)
+3)product of list
+def productoflist(n):
+    product=1
+    for i in n:
+        product=product*i
+    return(product)
+
+samplelist=[8,2,3,-1,7]
+product=productoflist(samplelist)
+print(product)
+
+
+.)reverse a sentence without funtion and print words in normal order
+string="hello pello i m Nikhil Raoraane"
+a=string.split()
+for i in range(len(a)-1,-1,-1):
+    print(a[i])
+4)accept a sentence and reverse it
+string=input("ENter a string")
+a=string.replace(" ","")
+def reverse_string(a):
+    for i in range(len(a)-1,-1,-1):
+        print(a[i],end="")
+    
+reverse_string(a)
+    
+5)factorial program
+def factorial(n):
+    fact=1
+    for i in range(n,1,-1):
+        fact=fact*i;
+    return fact
+n=int(input("enter a no"))
+fact=factorial(n)
+print(fact)
+6)check no in range
+def checkinrange(no,start,end):
+    if no>=start and no<=end:
+        return 'NUMBER is in range'
+    else:
+        return 'NUMBER not in range'
+no=int(input("enter a number"))
+start=int(input("enter a start no of range"))
+end=int(input("enter a end no of range"))
+a=checkinrange(no,start,end)
+print(a)
+
+7)
+def count(string):
+    a=b=0
+    for i in string:
+        if i.isupper():
+            a=a+1
+        elif i.islower():
+            b=b+1
+    return a,b
+string=input("enter a string")
+a,b=count(string)
+print("upper case letters are:-",a)
+print("lower case letters are:-",b)
+
+        
+8)uniquelist
+def unique(a):
+    return list(dict.fromkeys(a))
+
+a=[1,1,2,2,3,3,4,4,5,5]
+b=unique(a)
+print(b)
+
+or
+
+
+def unique(a):
+    return list(set(a))
+
+a=[1,1,2,2,3,3,4,4,5,5]
+b=unique(a)
+print(b)
+
+
+9)prime or not
+def isprime(no):
+    for i in range(2,int(no/2)):
+        if no%i==0:
+            return "NO NOT PRIME"
+        else:
+            return "NO IS PRIME"
+no=int(input("ENTER A NO"))
+print(isprime(no))
+
+10)print even nos
+def even(a):
+    b=[]
+    for i in a:
+        if i%2==0:
+            b.append(i)
+    print(b)
+
+a=[1,2,3,4,5,6,7,8,9]
+even(a)
+
+11)perfect number or not
+
+def isperfect(no):
+    a=0
+    for i in range(1,int(no/2)+1):
+        if no%i==0:
+            a=a+i
+    if a==no:
+        print("ITS A PERFECT NUMBER")
+    else:
+        print(no,a,no/2,"NO IS NOT PERFECT")
+n=int(input("ENTER A NO "))
+isperfect(n)
+12)palindrome or not
+def ispalindrome(a):
+    name=""
+    for i in range(len(a)-1,-1,-1):
+        name+=a[i]
+    if name==a:
+        print("is palindrome")
+    else:
+        print("NOt palindrome")
+string=input("Enter a word")
+ispalindrome(string)
+
+14)pangram
+def pangram(a):
+	a.replace(" ","")
+	if set(a.lower())==set(string.ascii_lowercase+' '):
+		return 'pangram'
+	else:
+		return 'not pangram'
+here we are importing string module 
+we are using string.ascii_lowercase
+variable which contains all the lowercase characters from a-z
+15)hypenseperated
+a='nikhil-is-a-good-boy'
+a.split()
+b=a.split("-")
+b.sort()
+c=b[0]
+for i in range(1,len(b)):
+    c+='-'+b[i]
+16)def SQR:
+    for i in range(1,31):
+    print(i**2)
+18)The exec() function to solve the code contained inside a variable.
+ exec() function is used for the dynamic execution of Python code. 
+It can take a block of code containing Python statements like loops, 
+class, function/method definitions and even try/except block. This
+ function doesn’t return anything. The code below solves the problem
+ and explains the exec() function.
+def strcontainingpythoncode():
+    a="""
+b=6
+c=10
+d=b+c
+print(d)
+        """
+    exec(a)
+strcontainingpythoncode()
+19)function inside function.
+def add(a,b):
+    c=a*b
+    return c
+
+def add_list(a):
+    for i in range(0,len(a)-2):
+        print(add(a[i+1],a[i+1]))
+
+
+add_list([1,2,3,4,5,6,7,8,9])
+20)determine no of local variables
+def local(s,d,f,g):
+    a=10
+    b=20
+    c=30
+
+print(local.__code__.co_nlocals)->7
+This function is used to get the no
+of loacl variables including arguments 
+in a function
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
