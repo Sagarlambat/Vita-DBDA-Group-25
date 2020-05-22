@@ -68,14 +68,14 @@ for s in l:
 #Write a program to check wheather number is even or odd using if 
 #Else statement…
 
-
+'''
 x=int(input("Enter value of n:"))
 if (x%2==0):
       print("no. is even",x)
 else:
        print("no. is odd:",x)
 
-
+'''
 
 
 
