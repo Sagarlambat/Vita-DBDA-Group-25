@@ -65,4 +65,41 @@ for x in range(1, z + 1):
             print(chr(ord('A') - 1 + x), end = "  "); 
         print("");
 
+#6. Python Program to Read a Number n And Print the Series
+#   “1+2+…..+n= “
+#          sample:
+#          Case 1:
+#	Enter a number: 4
+#   1 + 2 + 3 + 4 = 10
+#   Case 2:
+#   Enter a number: 5
+#   1 + 2 + 3 + 4 + 5 = 15
+
+a=int(input("Enter a no.: "))
+s=0
+for i in range(1,a+1):
+    s+=i
+    if a==i:
+        print(i,end='')
+    else:
+        print(i,end='+')
+print("=",s,sep='')
+
+
+#7. #5.Write python program to print the pattern given below
+#Note: Take input from user
+#1
+#2 2
+#3 3 3
+#4 4 4 4
+#5 5 5 5 5
+
+x=0
+y=0
+z=5 
+for x in range(1, z + 1): 
+        for y in range(z,z-x , -1): 
+            print(0 + x, end = "  "); 
+        print("");
+
 
