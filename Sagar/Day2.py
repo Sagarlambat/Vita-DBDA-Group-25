@@ -86,7 +86,7 @@ for i in range(1,a+1):
 print("=",s,sep='')
 
 
-#7. #5.Write python program to print the pattern given below
+#7.Write python program to print the pattern given below
 #Note: Take input from user
 #1
 #2 2
