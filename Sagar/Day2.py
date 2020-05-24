@@ -42,12 +42,23 @@ for i in range(1,11):
 #Above triangle is given Calculate Sum of row wise 
 #Example we call function :- row_sum_odd_numbers(2)
 #Result will be=3+5=8
-
+'''
 def row_sum_odd_numbers(x):
     return x*x*x
 
 print(row_sum_odd_numbers(int(input("Enter a number: "))))
-
+'''
+no=int(input("Enter a number"))
+a=1
+b=[]
+for i in range(1,no+1):
+    for j in range(1,i+1):
+        print(a,end=' ')
+        if i==no:
+            b.append(a)
+        a=a+2
+    print('\n')
+print(sum(b))
 
 #5.Write python program to print the pattern given below
 #Note: Take input from user
