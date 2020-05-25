@@ -37,6 +37,9 @@ for i in range(n):
               print(str(j+1),end=' ')
        print()
 
+#4.
+![4](https://user-images.githubusercontent.com/44541800/82782971-265cbf80-9e7b-11ea-9331-28bf8f54269e.png)
+
 #5.
 sum=0
 n=int(input("enter a number"))
