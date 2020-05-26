@@ -1,13 +1,13 @@
 #1.You are given with a list of integer elements. Make a new list which will store square of elements of previous list.
-'''
+
 a=[1,2,3,4,5,6,7,8,9]
 b=[i**2 for i in a]
 print(b)
-'''
+
 
 #2.From a list containing ints, strings and floats, make three lists to store them separately. 
 
-'''
+
 a=["a",1,2.56,"b","c",5,6,7.77]
 ints=[]
 strings=[]
@@ -22,7 +22,7 @@ for i in a:
 print(ints)
 print(strings)
 print(floats)
-'''
+
 
 #3.Print the pattern
 #1
@@ -31,12 +31,12 @@ print(floats)
 #1 2 3 4
 #1 2 3 4 5
 
-'''
+
 for i in range(1,6):
     for j in range(1,i+1):
         print(j,end=' ')
     print("")
-'''
+
 
 #4.Accept data in two 3*3  matrix and calculate the sum of the matrices.
 
@@ -44,7 +44,7 @@ for i in range(1,6):
 x=[[1,1,1],[1,1,1],[1,1,1]]
 y=[[1,2,3],[4,5,6],[7,8,9]]
 '''
-'''
+
 R = int(input("Enter the number of rows:")) 
 C = int(input("Enter the number of columns:")) 
 X=[]
@@ -73,7 +73,7 @@ for i in range(len(x)):
         n.append(X[i][j]+Y[i][j])
     v.append(n)
 print("\nResult = ",v)
-'''
+
     
 #5.Write a Python program to check whether a given number is a narcissistic number or not
 #For example, 371 is a narcissistic number; it has three digits, and if we cube each digits  33 + 73 + 13 the sum is 371.
@@ -86,7 +86,7 @@ print("\nResult = ",v)
 #8208 = 84+24+04+84
 #9474 = 94+44+74+44
 
-'''
+
 a=int(input("Enter a number: "))
 n=len(str(a))
 s=""
@@ -98,5 +98,5 @@ if b == a:
     print("The given number is a narcissistic number")
 else:
     print("The given number is not a narcissistic number")
-'''
+
 
