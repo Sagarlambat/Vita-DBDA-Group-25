@@ -51,6 +51,7 @@ def binary_search(list1,value):
                 first=mid+1
     return search
 list1=[2,3,5,6,4,8,7,9,1]
+list1=sorted(list1)
 value=6
 print(binary_search(list1,value))
 '''
@@ -67,13 +68,14 @@ print("Concatination of two list:",list_concate)
 #sampledict = {“John”:47,”Peter”:64,”Mahi”:37,”Maria”:76}
 '''
 roll_number = [47, 64, 69, 37, 76, 83, 95, 97]
-sampledict = {'John':47,'Peter':64,'Mahi':37,'Maria':76,'cimen':95}
-
-for i in roll_number:
-    if i not in list(sampledict.values()):
-        roll_number.remove(i)
-        print("Removed element is:",i)
+sampledict = {'John':47,'Peter':64,'Mahi':37,'Maria':76}
+res=[]
+for i in range(len(roll_number)):
+    if roll_number[i] not in sampledict.values():
+        res.append(roll_number[i])
+    print(res)
+for j in res:
+    roll_number.remove(j)
     print(roll_number)
-    print(sampledict)
 '''
 
