@@ -7,7 +7,7 @@
 #3.Exit
 # Python program to create Bankaccount class 
 # with both a deposit() and a withdraw() function 
-'''
+
 class Bank:
     name='Python Bank'
     def __init__(self):
@@ -39,10 +39,10 @@ while j==True:
     if a=='4':
         print('Thank you')
         j=False 
-'''
+
 #2. Write a Python class named Circle constructed by a radius and two
 #   methods which will compute the area and the perimeter of a circle.
-'''
+
 from math import pi
 class Circle:
     def init(self):
@@ -59,12 +59,12 @@ s=Circle()
 s.init()
 s.area()
 s.perimeter()
-'''
+
 #3. Define a class named Shape and its subclass Square. The Square class has an init function which takes a length as argument. Both classes have
 #a area function which can print the area of the shape where Shape's area is 0 by default.
 #Hints:
 #To override a method in super class, we can define a method with the same name in the super class.
-'''
+
 class Shape:
     def area(self,a=0):
         self.a=a
@@ -74,9 +74,9 @@ class Shape:
             self.a=length**2
         def area(self):
             print('Area of square is:-',self.a)
-'''
+
 #4. Write a program to count how many reference variables in a program.
-'''
+
 import sys
 class Demo:
     pass
@@ -85,10 +85,10 @@ a2=a1
 a3=a2
 a4=a3
 print("The number of reference variable:",sys.getrefcount(a1))
-'''
+
 
 #5. write any program to achieve composition in Python.
-'''
+
 class Student:
     def __init__(self,no):
         self.no=no
@@ -107,4 +107,4 @@ class Subject:
 
 a=Subject(10,"OOPS","Panda")
 print(a.info())
-'''
+
