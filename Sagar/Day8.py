@@ -1,5 +1,5 @@
 #1.Write a program to implement Constructor with Variable Number of Arguments.
-'''
+
 class Human:
 
     def __init__(self,*x):
@@ -7,10 +7,10 @@ class Human:
         print(self.x)
 
 y=Human("Sagar","Python","DBDA","Nikhil","Pritam",1,2,3,4,5)
-'''
+
 
 #2.Write a program to implement Constructor Overloading.
-'''
+
 class Human:
 
     def __init__(self,name="XYZ",age=0,gender):
@@ -28,9 +28,9 @@ class Human:
 #s=Human("Yash",50,"fdsa")
 
 y=Human("Sagar",50,"Male")
-'''
+
 #3.Write a program to implement multiple inheritance.
-'''
+
 class a:
     def aim(self):
         print("I am in a")
@@ -44,9 +44,9 @@ class c:
         print("I am in c")
 
 class d(a,b,c):
-'''
+
 #4.Write a program to implement operator overloading in python.
-'''
+
 class Student:
     def __init__(self,m1,m2):
         self.m1=m1
@@ -61,9 +61,9 @@ s1 = Student(1,2)
 s2 = Student(5,6)
 s3 = s1 + s2
 print(s3)
-'''
+
 #5.Write a Python program to square and cube every number in a given list of integers using Lambda.
-'''
+
 a=[1,2,3,4,5,6]
 print(list(map(lambda s: s**2,a)))
 print(list(map(lambda s: s**3,a)))
@@ -79,4 +79,4 @@ x.aim()
 x.bim()
 x.cim()
 x.dim()
-'''
+
