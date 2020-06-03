@@ -1,0 +1,144 @@
+#1.Write a function to compute divide by zero and use try/except to catch
+#the exceptions.
+'''
+
+a=1
+b=0
+
+try:
+    print(a/b)
+except ZeroDivisionError:
+    print("invalid denominator")
+'''
+
+#2.Write python program to check  that given number is valid mobile
+#number or not?
+'''
+import re
+def validNo(no):
+    checking=re.compile("(0/91)?[7-9][0-9]{9}")
+    return checking.match(no)
+
+no="9898766543"
+if (validNo(no)):
+    print("valid number")
+else:
+    print("invald number")
+'''
+
+#3.Write python program to check  that given email address is valid or not?
+'''
+
+import re
+
+regex = '^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
+
+def checking(email):
+    if(re.search(regex,email)):
+        print("valid mail")
+    else:
+        print("invalid mail")
+
+email="dhananjaymane@gmail.com"
+checking(email)
+'''
+
+#4.Write a python program to check given car registration number is valid
+#Maharashtra state registration number or not?
+
+#input format = MH 09 AB 1234
+'''
+import re
+no=input("enter the car registration no : ")
+a=re.compile("^[A-Z]{2}\s[0-9]{2}\s[A-Z]{2}\s[0-9]{4}$")
+if(a.match(no)):
+    print("registration no.is valid")
+else:
+    print("registration no. is not valid")
+
+'''
+
+
+#5.Write a python program to decorate arithmetic operations.
+'''
+
+def my_decorator(func):
+    def inner1(a,b):
+        print("Before Addition operation")
+        func(a,b)
+        print("After Addition operation")
+    return inner1
+
+@my_decorator
+
+def add(a,b):
+    print(a+b)
+
+add(1,2)
+'''
+
+#6.Write python program to generate Fibonacci Numbers upto 100 using generator.
+'''
+def generator():
+    a=1
+    b=1
+    for i in range(100):
+        while a<100:
+            yield a
+            a,b=b,a+b
+        
+for i in generator():
+   print(i)
+
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
