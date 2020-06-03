@@ -1,0 +1,166 @@
+#1.Write python program to perform bank operations using class and objects.
+#Conditions:
+#a.Bank name should be static.
+#b.Using menu driven program.
+#1 .Deposit
+#2. Withdraw
+#3. Exit
+
+'''
+class Bank:
+    name='ROYAL MINT'
+    def __init__(self):
+        self.balance=0
+    def deposit(self):
+        amount=float(input('Enter your amount\n'))
+        self.balance+=amount
+        print('-->your balance is\n',self.balance)
+    def withdraw(self):
+        amount=float(input('Enter amount to withdraw\n'))
+        if self.balance>amount:
+            self.balance-=amount
+            print('-->You have sucessfully withrawn amount Rs:-\n',amount)
+            print('-->your balance is\n',self.balance)
+        else:
+            print('Insufficient balance\n')
+    def balance_enquiry(self):
+        print('-->your balance is \n',self.balance)
+s=Bank()
+j=True
+while j==True:
+    a=input('Welcome to ROYAL MINT \npress 1,2,3,4 \n->DEPOSIT=1\n->WITHDRAWL=2\n->BALANCE ENQUIRY=3\n->QUIT=4\n')
+    if a=='1':
+        s.deposit()
+    if a=='2':
+        s.withdraw()
+    if a=='3':
+        s.balance_enquiry()
+    if a=='4':
+        print('Thank you')
+        j=False 
+'''
+
+#2.Write a Python class named Circle constructed by a radius and two methods
+#which will compute the area and the perimeter of a circle.
+'''
+from math import pi
+class Circle:
+    def init(self):
+        radius=float(input('Enter the Radius: '))
+        self.radius=radius
+    def area(self):
+        self.area=pi*(self.radius**2)
+        print('Area of circle is :',self.area)
+    def perimeter(self):
+        self.perimeter=2*pi*self.radius
+        print('Perimeter of circle is :',self.perimeter)
+s=Circle()
+
+s.init()
+s.area()
+s.perimeter()
+'''
+
+#3.Define a class named Shape and its subclass Square. The Square class has
+#an init function which takes a length as argument. Both classes have a area
+#function which can print the area of the shape where Shape's area is 0 by
+#default.
+
+#Hints:
+
+#To override a method in super class, we can define a method with the same
+#name in the super class.
+
+'''
+class Shape:
+    def area(self,s=0):
+        self.s=s
+        print("Area of shape is : ",self.s)
+class Square(Shape): 
+    def __init__(self,length=4):
+        self.length=length
+    def area(self):
+        a=(self.length*self.length)
+        print("Area of square is : ",a)
+s=Square()
+s.area()
+'''
+
+#4.Write a program to count how many reference variables in a program. 
+'''
+import sys
+class refer:
+    pass
+r1=refer()
+r2=r1
+r3=r2
+print("the number of reference variable:",sys.getrefcount(r1))
+'''
+
+#5.write any program   to achieve composition in Python
+
+'''
+class Tv:
+    def __init__(self,no):
+        self.no=no
+
+    def no_of_channels(self):
+        return self.no
+class sections:
+    def __init__(self,no,movies,news):
+        self.no=no
+        self.movies=movies
+        self.news=news
+        self.Tv=Tv(self.no)
+
+    def info(self):
+        return "no_of_channels : " +str(self.Tv.no_of_channels())+"\n"+str(self.movies)+"\n"+str(self.news)
+
+a=sections(500,"BAHUBALI","CORONA")
+print(a.info())
+
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
