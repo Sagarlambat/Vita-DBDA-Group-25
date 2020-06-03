@@ -1,0 +1,114 @@
+#1.Python program to Swap Keys and Values in Dictionary.
+'''
+old={"pritam":1,"sagar":2,"Mayur":3,"abhishek":4,"Nikhil":2}
+
+print("old dict:")
+print(old)
+
+new={}
+for key,value in old.items():
+    if value in new:
+        new[value].append(key)
+    else:
+        new[value]=[key]
+    
+print("new dict:")
+print("keys:values")
+for i in new:
+    print(i,':',new[i])
+'''
+
+#2.Write program to implement Selection sort.
+'''
+a=[7,4,9,2,5]
+
+print("before selection sort:")
+print(a)
+
+for i in range(len(a)):
+    min1=i
+    for j in range(i+1,len(a)):
+        if a[min1]>a[j]:
+            min1=j
+    a[i],a[min1]=a[min1],a[i]
+
+print("after selection sort:")
+b=[]
+for i in range(len(a)):
+    b.append(a[i])
+print(b)
+        
+'''
+
+#3.Write program to implement Insertion sort.
+'''
+def insertionSort(nlist):
+   for index in range(1,len(nlist)):
+
+     currentvalue = nlist[index]
+     position = index
+
+     while position>0 and nlist[position-1]>currentvalue:
+         nlist[position]=nlist[position-1]
+         position = position-1
+
+     nlist[position]=currentvalue
+
+nlist = [14,46,43,27,57,41,45,21,70]
+insertionSort(nlist)
+print(nlist)
+'''
+
+#4.Given a nested list extend it with adding sub list ["h", "i", "j"] in a
+#such a way that it will look like the following list.
+#Given list:list1=["a","b",["c",["d","e",["f","g"],"k"],"l"],"m","n"]
+#Sub List to be added = ["h","i","j"]
+#Expected output:-
+#['a','b',['c',['d','e',['f','g','h','i','j'],'k'],'l'],'m','n']
+
+'''
+
+Given_list1=['a', 'b', ['c', ['d', 'e', ['f', 'g'], 'k'], 'l'], 'm', 'n']
+Sub_List_to_be_added=['h','i','j']
+Given_list1[2][1][2].extend(Sub_List_to_be_added)
+print(Given_list1)
+
+'''
+
+#5.Access the value of key “history”
+#sampleDict = { 
+#   "class":{ 
+#      "student":{ 
+#         "name":"Mike",
+#         "marks":{ 
+#            "physics":70,
+#            "history":80
+#         }
+#      }
+#   }
+#}
+#Expected output: 80
+'''
+sampleDict = { 
+   "class":{ 
+      "student":{ 
+         "name":"Mike",
+         "marks":{ 
+            "physics":70,
+            "history":80
+         }
+      }
+   }
+}
+print(sampleDict['class']['student']['marks']['history'])
+
+'''
+
+
+
+
+
+
+
+
+
