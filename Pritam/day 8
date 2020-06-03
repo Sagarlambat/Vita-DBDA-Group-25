@@ -1,0 +1,85 @@
+#1.Write a program to implement Constructor with Variable Number of Arguments.
+'''
+class Corona:
+    def __init__(self,*x):
+        self.x=x
+        print(self.x)
+
+y=Corona('arnold','cutler','phil','ronnie','dennis',1990,100)
+'''
+
+#2.Write a program to implement Constructor Overloading.
+'''
+class first:
+    def __init__(self):
+        self.Name="cristiano"
+    def display(self):
+        print(self.Name)
+    
+class second(first):
+    def __init__(self):
+        self.Name="ronaldo"
+    #def display(self):
+        #print(self.Name)
+
+s=second()
+s.display()
+
+'''
+#3.Write a program to implement multiple inheritance.
+'''
+class first:
+    def first(self):
+        print("this is first")
+class second:
+    def second(self):
+        print("this is second")
+class third(first,second):
+    def third(self):
+        print("this is third")
+
+d=third()
+d.first()
+d.second()
+d.third()
+'''
+#4.Write a program to implement operator overloading in python.
+'''
+class corona: 
+    def __init__(self, a, b): 
+        self.a = a 
+        self.b = b 
+   
+    def __add__(self, other): 
+        return self.a + other.a,self.b + other.b 
+  
+    def __str__(self): 
+        return self.a, self.b 
+  
+s1 = corona(1, 2) 
+s2 = corona(3, 4) 
+s3 = s1+s2 
+print(s3) 
+'''
+
+#5.Write a Python program to square and cube every number in a given list of
+#integers using Lambda.
+'''
+l1=[1,2,3,4,5]
+print("given lsit:\n",l1)
+
+square=list(map(lambda x:x**2,l1))
+print("Square of each number in list:\n",square)
+
+cube=list(map(lambda x:x**3,l1))
+print("Cube of each number in list:\n",cube)
+
+'''
+
+
+
+
+
+
+
+
