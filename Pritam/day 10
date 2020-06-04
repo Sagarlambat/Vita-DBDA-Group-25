@@ -1,0 +1,229 @@
+#7
+
+#1.Write a NumPy program to get the numpy version and show numpy build
+#configuration.
+'''
+import numpy as np
+print(np.__version__)
+print(np.show_config())
+'''
+
+#2.Write a NumPy program to test element-wise for complex number, real number
+#of a given array. Also test whether a given number is a scalar type or not.
+'''
+import numpy as np
+a=np.array([1+1j, 1+0j, 7.5, 1, 2, 2j])
+print("Given array : ")
+print(a)
+print("\nComplex number:")
+print(np.iscomplex(a))
+print("\nReal number:")
+print(np.isreal(a))
+print("\nScalar type:")
+print(np.isscalar(7.5))
+print(np.isscalar([7.5]))
+
+'''
+
+#3.Write a NumPy program to test whether none of the elements of a given
+#array is zero.
+
+'''
+import numpy as np
+
+a = np.array([1, 2, 3, 4])
+print("Given array:")
+print(a)
+print("\ntest whether none of the elements of a given array is zero:")
+print(np.all(a))
+
+b = np.array([0, 1, 2, 3])
+print("\nGiven array:")
+print(b)
+print("\ntest whether none of the elements of a given array is zero:")
+print(np.all(b))
+'''
+
+#4.Write a NumPy program to test whether any of the elements of a given array
+#is non-zero.
+
+'''
+import numpy as np
+
+a = np.array([1, 0, 0, 0])
+print("Given array:")
+print(a)
+print("\ntest whether none of the elements of a given array is zero:")
+print(np.any(a))
+b = np.array([0, 0, 0, 0])
+print("\nGiven array:")
+print(b)
+print("\ntest whether none of the elements of a given array is zero:")
+print(np.any(b))
+
+'''
+
+#5.Write a NumPy program to test element-wise for NaN of a given array.
+'''
+import numpy as np
+
+a = np.array([0, 1, np.nan, np.inf])
+print("Given array : ")
+print(a)
+
+print("\ntest element-wise for NaN : ")
+print(np.isnan(a))
+'''
+
+#6.Write a NumPy program to create an element-wise comparison
+#(greater, greater_equal, less and less_equal) of two given arrays.
+'''
+import numpy as np
+
+a = np.array([4, 7])
+b = np.array([2, 7])
+print("Original numbers:")
+print(a)
+print(b)
+
+print("\nComparison - greater")
+print(np.greater(a, b))
+
+print("\nComparison - greater_equal")
+print(np.greater_equal(a, b))
+
+print("\nComparison - less")
+print(np.less(a, b))
+
+print("\nComparison - less_equal")
+print(np.less_equal(a, b))
+
+'''
+
+#7.Write a NumPy program to create an element-wise comparison
+#(equal, equal within a tolerance) of two given arrays.
+#Input:
+#x = np.array ([72, 79, 85, 90, 150, -135, 120, -10, 60, 100])
+#y = np.array ([72, 79, 85, 90, 150, -135, 120, -10, 60, 100.000001])
+
+'''
+
+x = np.array ([72, 79, 85, 90, 150, -135, 120, -10, 60, 100])
+y = np.array ([72, 79, 85, 90, 150, -135, 120, -10, 60, 100.0
+
+'''
+
+#8.Write a NumPy program to create an array with the values
+#1, 7, 13, 105 and determine the size of the memory occupied by the array.
+
+'''
+import numpy as np
+a=np.array([1, 7, 13, 105])
+print("given array : ")
+print(a)
+print("size of the memory occupied by the array : ")
+print("%d bytes"%(a.size*a.itemsize))
+'''
+
+#9.Write a NumPy program to create an array of 10 zeros, 10 ones, 10 fives.
+'''
+import numpy as np
+
+a=np.zeros(10)
+print("Array of 10 zeros:")
+print(a)
+
+b=np.ones(10)
+print("\nArray of 10 ones:")
+print(b)
+
+c=np.ones(10)*5
+print("\nArray of 10 fives:")
+print(c)
+'''
+
+#10.Write a NumPy program to create an array of the integers from 30 to 70.
+'''
+import numpy as np
+
+a=np.arange(30,71)
+print("Array of the integers from 30 to 70")
+print(a)
+'''
+
+#11.Write a NumPy program to create an array of all the even integers from
+#30 to 70.
+'''
+
+import numpy as np
+
+a=np.arange(30,71,2)
+print("Array of the even integers from 30 to 70")
+print(a)
+
+'''
+
+#12.Write a NumPy program to create a 3x3 identity matrix.
+'''
+import numpy as np
+
+a=np.identity(3)
+print('3x3 identity matrix:')
+print(a)
+'''
+
+#13.Write a NumPy program to generate a random number between 0 and 1.
+'''
+import numpy as np
+
+rand_num = np.random.normal(0,1,1)
+print("Random number between 0 and 1:")
+print(rand_num)
+'''
+
+#14.Write a NumPy program to generate an array of 15 random numbers
+#from a standard normal distribution.
+
+'''
+import numpy as np
+
+no= np.random.normal(0,1,15)
+print("15 random numbers from a standard normal distribution : ")
+print(no)
+
+'''
+
+#15.Write a NumPy program to create a vector with values
+#ranging from 15 to 55 and print all values except the first and last.
+'''
+import numpy as np
+
+a = np.arange(15,55)
+print("vector with first and last : ")
+print(a)
+print("vector without first and last : ")
+print(a[1:-1])
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
