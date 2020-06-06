@@ -1,0 +1,101 @@
+import pandas as pd
+df=pd.read_csv('d:\Automobile_data.csv')
+
+#2
+
+#Question 1: From given data set print first and last five rows.
+'''
+print(df.head(5))
+print(df.tail(5))
+'''
+
+#Question 2: Clean data and update the CSV file.
+
+
+#Question 3: Find the most expensive car company name.
+'''
+M_E_car= df[['company','price']][df['price']==df['price'].max()]
+print("MOst expendive car company : ",M_E_car)
+'''
+
+#Question 4: Print All Toyota Cars details.
+'''
+a=df[df.company=="toyota"]
+print("All Toyota Cars details : ",a)
+'''
+#Question 5: Count total cars per company.
+
+'''
+a=df["company"].value_counts()
+print("total cars per company : \n",a)
+'''
+
+#Question 6: Find each company’s Higesht price car.
+
+'''
+E_C_H_P_C=df.groupby(['company'])[['price']].max()
+print(E_C_H_P_C)
+'''
+
+#Question 7: Find the average mileage of each car making company.
+
+'''
+a=df.groupby(["company"])[["average-mileage"]].mean()
+print(a)
+'''
+
+#Question 8: Sort all cars by Price column.
+
+'''
+a=df.sort_values(["price"])
+print(a)
+'''
+
+
+#Question 9: Concatenate two data frames using the following conditions
+#Create two data frames using the following two Dicts, Concatenate those two
+#data frames and create a key for each data frame.
+#GermanCars = {'Company': ['Ford', 'Mercedes', 'BMV', 'Audi'],
+#'Price': [23845, 171995, 135925 , 71400]}
+#japaneseCars = {'Company': ['Toyota', 'Honda', 'Nissan', 'Mitsubishi '],
+#'Price': [29995, 23600, 61500 , 58900]}
+
+'''
+GermanCars = {'Company': ['Ford', 'Mercedes', 'BMV', 'Audi'], 'Price': [23845, 171995, 135925 , 71400]}
+japaneseCars = {'Company': ['Toyota', 'Honda', 'Nissan', 'Mitsubishi '], 'Price': [29995, 23600, 61500 , 58900]}
+a=pd.DataFrame(GermanCars)
+b=pd.DataFrame(japaneseCars)
+c=pd.concat([a,b],keys=['Germany','Japan'])
+print(c)
+'''
+
+#Question 10: Merge two data frames using the following condition
+#Create two data frames using the following two Dicts, Merge two data frames,
+#and append the second data frame as a new column to the first data frame.
+#Car_Price = {'Company': ['Toyota', 'Honda', 'BMV', 'Audi'],
+#'Price': [23845, 17995, 135925 , 71400]}
+#car_Horsepower = {'Company': ['Toyota', 'Honda', 'BMV', 'Audi'],
+#'horsepower': [141, 80, 182 , 160]}
+'''
+Car_Price = {'Company': ['Toyota', 'Honda', 'BMV', 'Audi'], 'Price': [23845, 17995, 135925 , 71400]}
+Car_Horsepower = {'Company': ['Toyota', 'Honda', 'BMV', 'Audi'], 'horsepower': [141, 80, 182 , 160]}
+a=pd.DataFrame(Car_Price)
+b=pd.DataFrame(Car_Horsepower)
+c=pd.merge(a,b,on='Company')
+print(c)
+
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
